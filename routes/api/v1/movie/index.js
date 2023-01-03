@@ -1,8 +1,8 @@
 'use strict'
-const Dramaindo = require('../../../lib/dramaindo.js')
+const Movie = require('../../../../lib/movie.js')
 module.exports = async function (fastify, opts) {
   fastify.get('/:mode', async function (request, reply) {
-    const drama  = new Dramaindo()
+    const drama  = new Movie()
     const page = request.query.page ? request.query.page : 1
     // console.log(page)
     const mode = request.params.mode
