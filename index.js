@@ -6,9 +6,21 @@ const cors = require('@fastify/cors')
 
 module.exports = async function (fastify, opts) {
 
-    fastify.register(cors, {
-        origin: true
-    })
+    // fastify.register(cors, {
+    //     origin: true
+    // })
+    fastify.register(require('@fastify/cors'), (instance) => {
+        return (req, callback) => {
+          const corsOptions = {
+            // This is NOT recommended for production as it enables reflection exploits
+            origin: true
+          };
+
+
+          // callback expects two parameters: error and options
+          callback(null, corsOptions)
+        }
+      })
     // Place here your custom code!
 
     // Do not touch the following lines
