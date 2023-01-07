@@ -25,7 +25,8 @@
     "cheerio": "^1.0.0-rc.12",
     "fastify": "^4.0.0",
     "fastify-cli": "^4.4.0",
-    "fastify-plugin": "^3.0.0"
+    "fastify-plugin": "^3.0.0",
+    "firebase-admin": "^11.4.1"
   },
   "devDependencies": {
     "tap": "^16.1.0"
